@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+             <h1><a href="index.html">
+                <img src = "images/SHOP.CO.svg">
+             </a></h1>
+             <nav>
+                <a href="#">Shop</a>
+                <a href="#">On Sale</a>
+                <a href="#">New Arrivals</a>
+                <a href="#">Brands</a>
+             </nav>
+
+
+             <div class="header-actions">
+                <form action="/search" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
+                    <button type="submit" aria-label="Tìm kiếm">
+                        <img src ="images/SearchLogo.svg">
+                    </button>
+                </form>
+
+
+                <div class="header-icons">
+                    <a href="cart.html" class="icon-link" aria-label="Giỏ hàng">
+                        <img src = "images/CartLogo.svg">
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="user.html" class="icon-link" aria-label="Tài khoản">
+                        <img src = "images/UserLogo.svg">
+                    </a>
+                </div>
+             </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            Home > Shop
+        </div>
+    </div>
+
+    <main class="main-content container">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            
+            <div class="filter-group">
+                <h3 class="filter-title">Categories</h3>
+                <ul class="filter-list category-filter" id="category-filter">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="category" value="T-Shirt"> T-Shirt
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Polo"> Polo
+                        </label>
+                    </li>
+                     <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Jeans"> Jeans
+                        </label>
+                    </li>
+                     <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Shirt"> Shirt
+                        </label>
+                    </li>
+                     <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Kitchen"> Kitchen
+                        </label>
+                    </li>
+                     <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Furniture"> Furniture
+                        </label>
+                    </li>
+                     <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Decoration"> Decoration
+                        </label>
+                    </li>
+                     <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Storage"> Storage
+                        </label>
+                    </li>
+                     <li>
+                        <label>
+                            <input type="checkbox" name="category" value="Textile"> Textile
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3 class="filter-title">Price Range</h3>
+                <div class="price-filter" id="price-filter">
+                    <div class="price-input-group">
+                        <label for="min-price">Min:</label>
+                        <input type="number" id="min-price" name="min_price" placeholder="0" min="0">
+                    </div>
+                    <div class="price-input-group">
+                        <label for="max-price">Max:</label>
+                        <input type="number" id="max-price" name="max_price" placeholder="Cao nhất" min="0">
+                    </div>
+
+                     <button id="apply-price-filter">Apply</button>
+                </div>
+                 <div class="price-slider">...</div>
+            </div>
+
+             <div class="filter-group">
+                 <button id="clear-filters" class="clear-button">Clear All Filters</button>
+             </div>
+
+
+        </aside>
+
+        <section class="product-listing">
+            <div class="toolbar">
+                <p class="results-count" id="results-count">Đang tải...</p>
+                <div class="sort-options">
+                    <label for="sort">Sắp xếp theo:</label>
+                    <select name="sort" id="sort">
+                        <option value="default">Mặc định</option>
+                        <option value="price_asc">Giá tăng dần</option>
+                        <option value="price_desc">Giá giảm dần</option>
+                        <option value="name_asc">Tên A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+               
+                <p>Đang tải sản phẩm...</p>
+            </div>
+
+            <nav class="pagination" id="pagination">
+               >
+            </nav>
+        </section>
+    </main>
+
+
+    <footer class="page-footer">
+         <div class="container">
+            <p>© 2023 My Shop. All rights reserved.</p>
+         </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
